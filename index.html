@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stock Market — Trader Qualification</title>
+  <meta name="description" content="Stock Market official qualification assessment for active traders. Align your risk and execution strategy with our desk.">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Minimal Brand Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">STOCK MARKET</span>
+          <span class="brand-tagline">Trader Assessment Desk</span>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span class="header-badge-dot" aria-hidden="true"></span>
+        <span>Verified Desk</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Assessment Wrapper (Form-First Layout) -->
+  <main class="main-wrapper">
+    <div class="assessment-container">
+      <div class="assessment-card" id="assessmentCard">
+        
+        <!-- Progress Header -->
+        <div class="card-header" id="cardHeader">
+          <div class="progress-meta">
+            <span class="step-label" id="stepLabel">Step 1 of 5</span>
+            <span class="step-counter" id="stepCounter">20% Completed</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- Form Steps Body -->
+        <div class="card-body" id="cardBody">
+          
+          <!-- ==============================================================
+               STEP 1: Challenge
+               ============================================================== -->
+          <section class="step-pane active" id="stepPane1" aria-labelledby="stepTitle1">
+            <h1 class="step-title" id="stepTitle1">What’s your biggest challenge right now?</h1>
+            
+            <div class="step-error-banner" id="stepBannerError1" role="alert"></div>
+
+            <div class="options-list" role="radiogroup" aria-labelledby="stepTitle1">
+              <label class="option-card" data-group="challenge" data-value="Frequent stop-loss hits" tabindex="0">
+                <input type="radio" name="challenge" value="Frequent stop-loss hits">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">Frequent stop-loss hits</span>
+              </label>
+
+              <label class="option-card" data-group="challenge" data-value="Wrong position sizing" tabindex="0">
+                <input type="radio" name="challenge" value="Wrong position sizing">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">Wrong position sizing</span>
+              </label>
+
+              <label class="option-card" data-group="challenge" data-value="No proper exit plan" tabindex="0">
+                <input type="radio" name="challenge" value="No proper exit plan">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">No proper exit plan</span>
+              </label>
+
+              <label class="option-card" data-group="challenge" data-value="Emotional decision-making" tabindex="0">
+                <input type="radio" name="challenge" value="Emotional decision-making">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">Emotional decision-making</span>
+              </label>
+            </div>
+          </section>
+
+          <!-- ==============================================================
+               STEP 2: Contact Details (No email, no OTP)
+               ============================================================== -->
+          <section class="step-pane" id="stepPane2" aria-labelledby="stepTitle2">
+            <h2 class="step-title" id="stepTitle2">Your Contact Details</h2>
+            
+            <div class="step-error-banner" id="stepBannerError2" role="alert"></div>
+
+            <!-- Exact supporting text (approx 9-10px) -->
+            <p class="subtle-notice">Our team needs these details to contact you.</p>
+
+            <div class="form-group" id="groupFullName">
+              <label class="form-label" for="fullName">
+                Full Name <span class="required-star">*</span>
+              </label>
+              <div class="input-container">
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  class="form-input" 
+                  placeholder="e.g. Rahul Sharma" 
+                  autocomplete="name"
+                  maxlength="60"
+                  required
+                >
+              </div>
+              <div class="field-error-msg" id="errorFullName"></div>
+            </div>
+
+            <div class="form-group" id="groupMobileNumber">
+              <label class="form-label" for="mobileNumber">
+                Mobile Number <span class="required-star">*</span>
+              </label>
+              <div class="input-container">
+                <div class="input-prefix" aria-hidden="true">
+                  <span class="flag-icon">🇮🇳</span>
+                  <span>+91</span>
+                </div>
+                <input 
+                  type="tel" 
+                  id="mobileNumber" 
+                  name="mobileNumber" 
+                  class="form-input has-prefix" 
+                  placeholder="10-digit mobile number" 
+                  autocomplete="tel-national"
+                  maxlength="14"
+                  inputmode="numeric"
+                  required
+                >
+              </div>
+              <p class="field-helper">Enter 10-digit primary contact number</p>
+              <div class="field-error-msg" id="errorMobileNumber"></div>
+            </div>
+          </section>
+
+          <!-- ==============================================================
+               STEP 3: Trading Segment
+               ============================================================== -->
+          <section class="step-pane" id="stepPane3" aria-labelledby="stepTitle3">
+            <h2 class="step-title" id="stepTitle3">Which segment do you trade in?</h2>
+            
+            <div class="step-error-banner" id="stepBannerError3" role="alert"></div>
+
+            <div class="options-list" role="radiogroup" aria-labelledby="stepTitle3">
+              <label class="option-card" data-group="tradingSegment" data-value="Equity" tabindex="0">
+                <input type="radio" name="tradingSegment" value="Equity">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">Equity</span>
+              </label>
+
+              <label class="option-card" data-group="tradingSegment" data-value="Options" tabindex="0">
+                <input type="radio" name="tradingSegment" value="Options">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">Options</span>
+              </label>
+
+              <label class="option-card" data-group="tradingSegment" data-value="Futures" tabindex="0">
+                <input type="radio" name="tradingSegment" value="Futures">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">Futures</span>
+              </label>
+
+              <label class="option-card" data-group="tradingSegment" data-value="Commodity" tabindex="0">
+                <input type="radio" name="tradingSegment" value="Commodity">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">Commodity</span>
+              </label>
+            </div>
+          </section>
+
+          <!-- ==============================================================
+               STEP 4: Trading Capital
+               ============================================================== -->
+          <section class="step-pane" id="stepPane4" aria-labelledby="stepTitle4">
+            <h2 class="step-title" id="stepTitle4">Trading capital?</h2>
+            
+            <div class="step-error-banner" id="stepBannerError4" role="alert"></div>
+
+            <div class="options-list" role="radiogroup" aria-labelledby="stepTitle4">
+              <label class="option-card" data-group="tradingCapital" data-value="Below 50K" tabindex="0">
+                <input type="radio" name="tradingCapital" value="Below 50K">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">Below 50K</span>
+              </label>
+
+              <label class="option-card" data-group="tradingCapital" data-value="50K–1 Lakh" tabindex="0">
+                <input type="radio" name="tradingCapital" value="50K–1 Lakh">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">50K–1 Lakh</span>
+              </label>
+
+              <label class="option-card" data-group="tradingCapital" data-value="1 Lakh–2 Lakh" tabindex="0">
+                <input type="radio" name="tradingCapital" value="1 Lakh–2 Lakh">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">1 Lakh–2 Lakh</span>
+              </label>
+
+              <label class="option-card" data-group="tradingCapital" data-value="2 Lakh+" tabindex="0">
+                <input type="radio" name="tradingCapital" value="2 Lakh+">
+                <div class="option-indicator" aria-hidden="true"></div>
+                <span class="option-text">2 Lakh+</span>
+              </label>
+            </div>
+          </section>
+
+          <!-- ==============================================================
+               STEP 5: Final Details (WhatsApp Number & State)
+               ============================================================== -->
+          <section class="step-pane" id="stepPane5" aria-labelledby="stepTitle5">
+            <h2 class="step-title" id="stepTitle5">Final Details</h2>
+            
+            <div class="step-error-banner" id="stepBannerError5" role="alert"></div>
+
+            <p class="field-helper" style="margin-bottom: 16px;">Please confirm your communication WhatsApp number and residence state.</p>
+
+            <div class="form-group" id="groupWhatsappNumber">
+              <label class="form-label" for="whatsappNumber">
+                WhatsApp Number <span class="required-star">*</span>
+              </label>
+              <div class="input-container">
+                <div class="input-prefix" aria-hidden="true">
+                  <span class="flag-icon">🇮🇳</span>
+                  <span>+91</span>
+                </div>
+                <input 
+                  type="tel" 
+                  id="whatsappNumber" 
+                  name="whatsappNumber" 
+                  class="form-input has-prefix" 
+                  placeholder="10-digit WhatsApp number" 
+                  autocomplete="tel-national"
+                  maxlength="14"
+                  inputmode="numeric"
+                  required
+                >
+              </div>
+              <p class="field-helper">Can be different from your primary mobile number</p>
+              <div class="field-error-msg" id="errorWhatsappNumber"></div>
+            </div>
+
+            <div class="form-group" id="groupState">
+              <label class="form-label" for="userState">
+                State <span class="required-star">*</span>
+              </label>
+              <select id="userState" name="userState" class="form-select" required>
+                <option value="">Select your state</option>
+                <!-- 28 Indian States -->
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <!-- Union Territories -->
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                <option value="Delhi (NCT)">Delhi (NCT)</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Ladakh">Ladakh</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+              </select>
+              <div class="field-error-msg" id="errorState"></div>
+            </div>
+          </section>
+
+          <!-- Navigation Actions -->
+          <div class="card-actions">
+            <button type="button" class="btn btn-secondary" id="btnBack" style="display: none;">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              <span>Back</span>
+            </button>
+
+            <button type="button" class="btn btn-primary" id="btnContinue" disabled>
+              <span>Continue</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-primary" id="btnSubmit" style="display: none;">
+              <span>Submit</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </button>
+          </div>
+
+        </div> <!-- /card-body -->
+
+        <!-- ==============================================================
+             REVIEW / CONFIRMATION SCREEN
+             ============================================================== -->
+        <div class="review-container" id="reviewScreen">
+          <div class="success-badge-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+
+          <h2 class="review-title">Enquiry Submitted Successfully</h2>
+          <p class="review-subtitle">
+            Thank you. Your enquiry has been submitted. Our team will review your profile and reach out shortly.
+          </p>
+
+          <div class="review-summary-card">
+            <h4>Assessment Summary</h4>
+            <div class="summary-grid">
+              <div class="summary-item">
+                <span class="summary-label">Biggest Challenge:</span>
+                <span class="summary-value" id="reviewChallenge">—</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Full Name:</span>
+                <span class="summary-value" id="reviewFullName">—</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Mobile Number:</span>
+                <span class="summary-value" id="reviewMobileNumber">—</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Trading Segment:</span>
+                <span class="summary-value" id="reviewTradingSegment">—</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Trading Capital:</span>
+                <span class="summary-value" id="reviewTradingCapital">—</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">WhatsApp Number:</span>
+                <span class="summary-value" id="reviewWhatsappNumber">—</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">State:</span>
+                <span class="summary-value" id="reviewState">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-actions" style="margin-top: 24px; text-align: center;">
+            <button type="button" class="btn btn-secondary" id="btnRestart">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              <span>Start New Assessment</span>
+            </button>
+          </div>
+        </div> <!-- /review-container -->
+
+      </div> <!-- /assessment-card -->
+    </div> <!-- /assessment-container -->
+  </main>
+
+  <!-- Minimal Compliant Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-copy">Copyright © 2026 Stock Market. All rights reserved.</p>
+      <div class="footer-links">
+        <button type="button" class="footer-link-btn" id="btnPrivacyPolicy" aria-haspopup="dialog" aria-controls="privacyModal">Privacy Policy</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Accessible Privacy Notice Modal Dialog -->
+  <div class="modal-backdrop" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="privacyModalTitle">Privacy Notice &amp; Policy</h3>
+        <button type="button" class="modal-close-btn" id="btnClosePrivacyModal" aria-label="Close privacy notice">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="privacy-intro">
+          This Privacy Notice outlines how <strong>Stock Market</strong> collects, handles, and protects information submitted through this trader qualification assessment.
+        </p>
+
+        <h4>1. Information Collected</h4>
+        <ul>
+          <li><strong>Assessment Details:</strong> Self-reported trading challenge, trading segment, and capital range.</li>
+          <li><strong>Contact Information:</strong> Full name, primary mobile number, WhatsApp number, and state of residence.</li>
+          <li><strong>Technical Metadata:</strong> IP address, user-agent details, and marketing campaign attribution parameters (UTM tags).</li>
+        </ul>
+
+        <h4>2. Purpose of Collection</h4>
+        <p>
+          Information collected is used strictly to evaluate candidate suitability for trader qualification, schedule introductory consultation calls, communicate qualification updates via WhatsApp or mobile phone, and prevent automated abuse.
+        </p>
+
+        <h4>3. Data Security &amp; Retention</h4>
+        <p>
+          Submitted data is securely stored in a managed PostgreSQL environment with encrypted transit (SSL/TLS). We do not sell, rent, or trade your contact information with unrelated third-party marketing brokers.
+        </p>
+
+        <h4>4. Business Contact Details</h4>
+        <p class="privacy-placeholder">
+          <em>[Notice: Official registered business entity name, physical office address, and verified grievance officer contact details will be finalized prior to public launch. For inquiries, contact: support@stockmarket.internal]</em>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="btnClosePrivacyModalBottom">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

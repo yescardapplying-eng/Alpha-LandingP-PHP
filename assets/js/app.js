@@ -33,6 +33,7 @@
     state: '',
 
     status: 'partial',
+    leadTracked: false,
 
     // Marketing Attribution & Meta Parameters
     utm_source: '',
@@ -791,6 +792,19 @@
         formState.leadReference = data.lead_reference;
       }
 
+      // Trigger Meta Pixel 'Lead' event strictly once upon verified backend submission
+      if (!formState.leadTracked && typeof window.fbq === 'function') {
+        try {
+          window.fbq('track', 'Lead', {
+            content_name: 'Stock Market Assessment',
+            status: 'completed'
+          });
+          formState.leadTracked = true;
+        } catch (fbErr) {
+          console.warn('[Meta Pixel Lead Event Warn]', fbErr);
+        }
+      }
+
       // Invalidate completed session so it can NEVER be reused or modified
       try {
         sessionStorage.setItem('stock_market_completed_session', formState.sessionId);
@@ -831,6 +845,7 @@
     formState.whatsappNumber = '';
     formState.state = '';
     formState.status = 'partial';
+    formState.leadTracked = false;
     delete formState.leadReference;
 
     // Reset inputs
